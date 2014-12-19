@@ -1,0 +1,10 @@
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\AngularJSDemo.Persistence.dll.config
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\AngularJSDemo.Persistence.dll
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\AngularJSDemo.Persistence.pdb
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\EntityFramework.dll
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\EntityFramework.xml
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Release\AngularJSDemo.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Release\AngularJSDemo.Persistence.dll
+C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Release\AngularJSDemo.Persistence.pdb

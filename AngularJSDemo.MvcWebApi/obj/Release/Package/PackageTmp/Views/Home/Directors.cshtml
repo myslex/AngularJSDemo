@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Microsoft WebAPI with Angular.js Demo | Directors";
+}
+
+@section scripts {
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="~/Scripts/Home/directors.js"></script>
+}
+
+<h1 class="page-header">Directors</h1>
+
+<div data-ng-app="directorsApp">
+    <!-- director list view -->
+    <div data-ng-controller="directorsCtrl">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Movies</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="d in app.directors | orderBy:'Id'">
+                    <td><span ng-bind="d.Id"></span></td>
+                    <td><span ng-bind="d.Name"></span></td>
+                    <td>
+                        <div ng-repeat="m in d.Movies">
+                            <span ng-bind="m.Title"></span><br />
+
+                        </div>
+                    </td>
+                    <td><button class="btn btn-link btn-xs" ng-click="app.findDirectorForEditing(d.Id)">Edit</button></td>
+                    <td><button class="btn btn-link btn-xs" ng-click="app.deleteDirector(d.Id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <label ng-bind="app.error"></label>
+        <br />
+
+        <!-- add new director view -->
+        <button class="btn btn-primary" ng-click="app.displayAddNewDirectorPanel()" ng-hide="app.showAddNewDirector">New director</button>
+        <div data-ng-controller="newDirectorCtrl" ng-show="app.showAddNewDirector">
+            <h4>New director:</h4>
+            <table>
+                <tr>
+                    <td><label class="control-label" for="newDirectorName">Name:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="newDirectorName" data-ng-model="newDirectorName" /></td>
+                </tr>
+            </table>
+            <br />
+            <button class="btn btn-primary btn-xs" data-ng-click="addNewDirector()">Add</button>
+            <button class="btn btn-danger btn-xs" data-ng-click="cancelAddingNewDirector()">Cancel</button>
+        </div>
+
+        <!-- edit existing director view -->
+        <div data-ng-show="app.editedDirectorId">
+            <h4>Edit director:</h4>
+            <table>
+                <tr>
+                    <td><label class="control-label" for="editDirectorName">Name:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="app.editDirectorName" data-ng-model="app.editDirectorName" /></td>
+                </tr>
+            </table>
+
+            <br />
+            <button class="btn btn-primary btn-xs" data-ng-click="app.saveEdit()">Update</button>
+            <button class="btn btn-danger btn-xs" data-ng-click="app.clearEditingArea()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Microsoft WebAPI with Angular.js Demo | Movies";
+}
+
+@section scripts {
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="~/Scripts/Home/movies.js"></script>
+}
+
+<h1 class="page-header">Movies</h1>
+
+<div data-ng-app="moviesApp">
+    <!-- movie list view -->
+    <div data-ng-controller="moviesCtrl">
+        <div class="form-group">
+            <label class="control-label">Filter by director name:</label>
+            <select class="form-control" data-ng-model="app.searchName" data-ng-options="d.Name as d.Name for d in app.directors">
+                <option value="">-- NONE --</option>
+            </select>
+        </div>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Budget</th>
+                    <th>Genre</th>
+                    <th>Director</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="m in app.movies | filter:app.searchFilter | orderBy:'Id'">
+                    <td><span ng-bind="m.Id"></span></td>
+                    <td><span ng-bind="m.Title"></span></td>
+                    <td><span ng-bind="m.Year"></span></td>
+                    <td><span ng-bind="m.Price"></span></td>
+                    <td><span ng-bind="m.Genre"></span></td>
+                    <td><span ng-bind="m.Director.Name"></span></td>
+                    <td><button class="btn btn-link btn-xs" ng-click="app.findMovieForEditing(m.Id)">Edit</button></td>
+                    <td><button class="btn btn-link btn-xs" ng-click="app.deleteMovie(m.Id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <label ng-bind="app.error"></label>
+
+        <!-- add new movie view -->
+        <button class="btn btn-primary" ng-click="app.displayAddNewMoviePanel()" ng-hide="app.showAddNewMovie">New movie</button>
+        <div data-ng-controller="newMovieCtrl" ng-show="app.showAddNewMovie">
+            <h4>New movie:</h4>
+            <table>
+                <tr>
+                    <td><label class="control-label" for="newMovieTitle">Title:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="newMovieTitle" data-ng-model="newMovieTitle" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="newMovieYear">Year:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="number" id="newMovieYear" data-ng-model="newMovieYear" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="newMoviePrice">Price:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="number" id="newMoviePrice" data-ng-model="newMoviePrice" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="newMovieGenre">Genre:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="newMovieGenre" data-ng-model="newMovieGenre" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="newMovieDirector">Director:</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- make user select one of the existing directors .. zz .. pro tip : create a new director before creating a new movie! ha! -->
+                        <select class="form-control" data-ng-model="app.selectedDirector" data-ng-options="d.Id as d.Name for d in app.directors"></select>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <button class="btn btn-primary btn-xs" data-ng-click="addNewMovie()">Add</button>
+            <button class="btn btn-danger btn-xs" data-ng-click="cancelAddingNewMovie()">Cancel</button>
+        </div>
+
+        <!-- edit existing movie view -->
+        <div data-ng-show="app.editedMovieId">
+            <h4>Edit movie:</h4>
+            <table>
+                <tr>
+                    <td><label class="control-label" for="editMovieTitle">Title:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="app.editMovieTitle" data-ng-model="app.editMovieTitle" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="editMovieYear">Year:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="number" id="app.editMovieYear" data-ng-model="app.editMovieYear" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="editMoviePrice">Price:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="number" id="app.editMoviePrice" data-ng-model="app.editMoviePrice" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="editMovieGenre">Genre:</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input-group-sm" type="text" id="app.editMovieGenre" data-ng-model="app.editMovieGenre" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label" for="editMovieDirector">Director:</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" data-ng-model="app.selectedDirector" data-ng-options="d.Id as d.Name for d in app.directors"></select>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+            <button class="btn btn-primary btn-xs" data-ng-click="app.saveEdit()">Update</button>
+            <button class="btn btn-danger btn-xs" data-ng-click="app.clearEditingArea()">Cancel</button>
+        </div>
+    </div>
+</div>

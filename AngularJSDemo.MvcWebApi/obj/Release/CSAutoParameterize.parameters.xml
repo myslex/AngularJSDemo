@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MovieContext-Web.config Connection String" description="MovieContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=AngularJSDemo;Integrated Security=SSPI;User ID=sa;Password=123456;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\m41n\\Documents\\GitHub\\csharp-projects\\AngularJSDemo\\AngularJSDemo\.MvcWebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MovieContext']/@connectionString" />
+  </parameter>
+</parameters>
