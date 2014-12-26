@@ -28,3 +28,13 @@ C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persi
 C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.csprojResolveAssemblyReference.cache
 C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.dll
 C:\Users\m41n\Documents\GitHub\csharp-projects\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.pdb
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\AngularJSDemo.Persistence.dll.config
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\AngularJSDemo.Persistence.dll
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\AngularJSDemo.Persistence.pdb
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.dll
+C:\Users\m41n\Documents\GitHub\AngularJSDemo\AngularJSDemo.Persistence\obj\Debug\AngularJSDemo.Persistence.pdb

@@ -9,7 +9,7 @@
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>AngularJSDemo.MvcWebApi.Models.MovieContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>True</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>woldner</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>wangularjs</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
